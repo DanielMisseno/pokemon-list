@@ -1,0 +1,39 @@
+.modal-overlay {
+	background: #000;
+	height: 100%;
+	left: 0;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.modal-form {
+	background-color: #dde;
+	border: solid 1px #bbd;
+	box-shadow: 1px 2px 2px #555;
+	color: #333;
+	font-family: verdana;
+	font-size: 13px;
+	left: 42%;
+	margin: 0 auto;
+	position: absolute;
+	right: 42%;
+	top: 45%;
+}
+
+.modal-form-title {
+	padding: 5px;
+}
+
+.modal-form-content {
+	background-color: #fff;
+	margin: 3px;
+	padding: 15px;
+	padding-bottom: 10px;
+}
+
+.modal-buttons {
+	margin-top: 15px;
+	text-align: right;
+}

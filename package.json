@@ -1,8 +1,8 @@
 {
-  "name": "pokemon",
+  "name": "pokemon-list",
   "version": "0.0.0",
   "private": true,
-  "description": "Small description for pokemon goes here",
+  "description": "Small description for pokemon-list goes here",
   "license": "MIT",
   "author": "",
   "directories": {
@@ -34,12 +34,17 @@
     "ember-data": "~2.18.0",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
+		"ember-lodash": "^4.0.0",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.18.0",
+		"ember-truth-helpers": "2.0.0",
     "ember-welcome-page": "^3.0.0",
     "eslint-plugin-ember": "^5.0.0",
-    "loader.js": "^4.2.3"
+    "loader.js": "^4.2.3",
+		"lodash": "4.11.2"
   },
+	"dependencies": {
+	},
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
   }

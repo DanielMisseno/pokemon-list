@@ -1,0 +1,74 @@
+.poke-list {
+	position: relative;
+}
+
+.poke-list-pagination {
+	background-color: #bce;
+	border-top: solid 3px #7ad;
+	font-size: 16px;
+	padding: 5px;
+}
+
+.poke-list-pagination .left,
+.poke-list-pagination .right,
+.poke-list-pagination .center {
+	display: inline-block;
+}
+
+.poke-list-pagination .left,
+.poke-list-pagination .right {
+	display: inline-block;
+	width: 45%;
+}
+
+.poke-list-pagination .poke-button {
+	border: solid 1px #7ad;
+	font-weight: bold;
+}
+
+.poke-list-pagination .left {
+}
+
+.poke-list-pagination .center {
+	text-align: center;
+	width: 10%;
+}
+
+.poke-list-pagination .right {
+	text-align: right;
+}
+
+.poke-list-item {
+	font-size: 20px;
+	padding: 5px;
+	padding-left: 10px;
+	text-transform: capitalize;
+}
+
+.poke-list-item:hover {
+	background-color: #eee;
+}
+
+.poke-list-item:not(:last-child) {
+	border-bottom: solid 1px #9ad;
+}
+
+.poke-list-item ul li {
+	display: inline-block;
+}
+
+.poke-list-item .buttons {
+	float: right;
+}
+
+.poke-list-item .buttons a {
+	background-color: #f9cc9d;
+	border: solid 1px #ad8e6d;
+	color: #362c22;
+	padding: 1px 10px;
+	text-decoration: none;
+}
+
+.poke-list-item .buttons a:hover {
+	background-color: #ebc194;
+}

@@ -1,0 +1,45 @@
+body {
+	background-image: url(images/pokelogo.png);
+	text-align: center;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+.page {
+	border: solid 1px #9ad;
+	box-shadow: 0 0 4px 1px #003;
+	display: inline-block;
+	max-width: 1024px;
+	min-width: 380px;
+	text-align: left;
+	width: 100%;
+}
+
+.page-header {
+	background-color: #bce;
+	line-height: 80px;
+}
+
+.page-title {
+	color: #222;
+	font-size: 40px;
+	margin: 0;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.page-content {
+	background-color: #fff;
+}
+
+.poke-empty-area {
+	position: relative;
+	height: 200px;
+}

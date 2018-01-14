@@ -1,0 +1,25 @@
+{{poke-menu settings=menuSettings}}
+<div class="poke-edit">
+	<ul class="poke-edit-form">
+		<li>
+			<label class="poke-edit-label" for="poke-name">Nome</label>
+			{{input id="poke-name" value=model.name maxlength="20"}}
+		</li>
+		<li>
+			<label class="poke-edit-label" for="poke-height">Altura</label>
+			{{poke-numeric-input id="poke-height" value=model.height maxlength="3" size="3"}}
+		</li>
+		<li>
+			<label class="poke-edit-label" for="poke-weight">Peso</label>
+			{{poke-numeric-input id="poke-weight" value=model.weight maxlength="3" size="3"}}
+		</li>
+	</ul>
+	{{poke-picture class="poke-edit-picture" src=model.picture}}
+	<div class="poke-edit-buttons">
+		{{#poke-button onclick=(action "save")}}Salvar{{/poke-button}}
+	</div>
+	{{#unless model.detailLoaded}}
+		{{poke-loader}}
+	{{/unless}}
+</div>
+{{poke-modal message=modal.save.confirmation.message buttons=modal.save.confirmation.buttons show=showModal buttonPressed=(action "save")}}

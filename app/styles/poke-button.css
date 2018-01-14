@@ -1,0 +1,20 @@
+.poke-button {
+	background-color: #9bd;
+	border: none;
+	color: #457;
+	cursor: pointer;
+	display: inline-block;
+	font-family: verdana;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.poke-button:hover {
+	background-color: #8ac;
+}
+
+.poke-button.disabled {
+	background-color: #aaa;
+	border-color: #888;
+	color: #888;
+}

@@ -1,0 +1,33 @@
+.poke-detail {
+	position: relative;
+	padding: 10px;
+}
+
+.poke-detail .loading-label {
+	top: 15%;
+}
+
+.poke-detail:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.poke-detail-label {
+	background-color: #ddd;
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+}
+
+.poke-detail-value {
+	text-transform: capitalize;
+}
+
+.poke-detail-picture {
+	float: left;
+}
+
+.poke-detail-form {
+	display: inline-block;
+}

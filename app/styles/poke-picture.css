@@ -1,0 +1,13 @@
+.poke-picture {
+	background-image: url(images/poke-mystery.png);
+	height: 96px;
+	width: 96px;
+}
+
+.poke-picture:not([src]) {
+	content: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7');
+}
+
+.poke-picture-loaded {
+	background-image: none;
+}

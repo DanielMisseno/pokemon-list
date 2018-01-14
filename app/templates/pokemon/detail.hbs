@@ -1,0 +1,21 @@
+{{poke-menu settings=menuSettings poke-id=model.id}}
+<div class="poke-detail">
+	<ul class="poke-detail-form">
+		<li>
+			<span class="poke-detail-label">Nome</span>
+			<span class="poke-detail-value">{{model.name}}</span>
+		</li>
+		<li>
+			<span class="poke-detail-label">Altura</span>
+			<span class="poke-detail-value">{{model.height}}</span>
+		</li>
+		<li>
+			<span class="poke-detail-label">Peso</span>
+			<span class="poke-detail-value">{{model.weight}}</span>
+		</li>
+	</ul>
+	{{poke-picture class="poke-detail-picture" src=model.picture}}
+	{{#unless model.detailLoaded}}
+		{{poke-loader}}
+	{{/unless}}
+</div>

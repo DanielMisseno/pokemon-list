@@ -1,0 +1,34 @@
+.poke-edit {
+	position: relative;
+	padding: 10px;
+}
+
+.poke-edit .loading-label {
+	top: 15%;
+}
+
+.poke-edit:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.poke-edit-label {
+	background-color: #ddd;
+	display: inline-block;
+	margin-top: 3px;
+	padding: 3px;
+}
+
+.poke-edit-picture {
+	float: left;
+}
+
+.poke-edit-form {
+	display: inline-block;
+}
+
+.poke-edit-buttons {
+	margin-top: 5px;
+	text-align: right;
+}

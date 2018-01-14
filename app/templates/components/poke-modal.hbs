@@ -1,0 +1,16 @@
+{{#if show}}
+	<div class='modal-overlay'> </div>
+	<div class="modal-content">
+		<div class="modal-form">
+			<div class="modal-form-title">Pokemon list</div>
+			<div class="modal-form-content">
+				<div class="modal-message">{{message}}</div>
+				<div class="modal-buttons">
+					{{#each-in buttons as |key button|}}
+						{{#poke-button onclick=(action "buttonPressed" button.value)}}{{button.text}}{{/poke-button}}
+					{{/each-in}}
+				</div>
+			</div>
+		</div>
+	</div>
+{{/if}}

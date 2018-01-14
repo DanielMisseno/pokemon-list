@@ -1,0 +1,27 @@
+.loading-overlay {
+	background: #fff;
+	height: 100%;
+	opacity: 0.5;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.loading-label {
+	background-color: #dde;
+	border: solid 1px #bbd;
+	color: #333;
+	font-family: verdana;
+	font-size: 13px;
+	left: 42%;
+	margin: 0 auto;
+	padding: 5px;
+	position: absolute;
+	right: 42%;
+	text-align: center;
+	top: 45%;
+}
+
+.loading-label-text {
+	margin-bottom: 4px;
+}

@@ -1,0 +1,15 @@
+{{#if settings.canGoBack}}
+	<li class="poke-menu-item poke-menu-back">
+		<a href="#" {{action "back"}}>Voltar</a>
+	</li>
+{{/if}}
+{{#if settings.canEdit}}
+	<li class="poke-menu-item">
+		{{#link-to "pokemon.edit" poke-id}}Editar{{/link-to}}
+	</li>
+{{/if}}
+{{#if settings.canAdd}}
+	<li class="poke-menu-item">
+		{{#link-to "pokemon.new"}}Adicionar{{/link-to}}
+	</li>
+{{/if}}

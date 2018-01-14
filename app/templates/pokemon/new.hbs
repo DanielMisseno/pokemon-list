@@ -1,0 +1,25 @@
+{{poke-menu settings=menuSettings}}
+<div class="poke-new">
+	<ul class="poke-new-form">
+		<li>
+			<label class="poke-new-label" for="poke-name">Nome</label>
+			{{input id="poke-name" value=name}}
+		</li>
+		<li>
+			<label class="poke-new-label" for="poke-height">Altura</label>
+			{{input id="poke-height" value=height}}
+		</li>
+		<li>
+			<label class="poke-new-label" for="poke-weight">Peso</label>
+			{{input id="poke-weight" value=weight}}
+		</li>
+	</ul>
+	<div class="poke-new-buttons">
+		{{#poke-button onclick=(action "save")}}Salvar{{/poke-button}}
+	</div>
+	{{#if saving}}
+		{{poke-loader message="Gravando..."}}
+	{{/if}}
+</div>
+
+{{poke-modal message=modal.save.success.message buttons=modal.save.success.buttons show=showModal buttonPressed=(action "showList")}}

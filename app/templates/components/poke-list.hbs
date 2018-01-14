@@ -1,0 +1,23 @@
+{{#if listIsEmpty}}
+	<li class="poke-empty-area">
+	</li>
+{{/if}}
+{{#each list as |pokeItem|}}
+	{{poke-list-item pokeItem=pokeItem}}
+{{/each}}
+{{#if pageCount}}
+	<li class="poke-list-pagination">
+		<div class="left">
+			{{#poke-button onclick=(action "previousPage") disabled=previosButtonDisabled}}&lt;{{/poke-button}}
+		</div><div class="center">
+			{{pageNumber}} / {{pageCount}}
+		</div><div class="right">
+			{{#poke-button onclick=(action "nextPage") disabled=nextButtonDisabled}}&gt;{{/poke-button}}
+		</div>
+	</li>
+{{/if}}
+{{#if loading}}
+	<li>
+		{{poke-loader}}
+	</li>
+{{/if}}

@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'pokemon',
+    modulePrefix: 'pokemon-list',
     environment,
     rootURL: '/',
     locationType: 'auto',

@@ -1,0 +1,36 @@
+.poke-menu {
+	background-color: #cde;
+	display: block;
+}
+
+.poke-menu::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.poke-menu-item {
+	display: inline-block;
+	float: right;
+}
+
+.poke-menu-back {
+	float: none;
+}
+
+.poke-menu-item:not(:first-child):not(:last-child) {
+	border-left: solid 1px #678;
+}
+
+.poke-menu-item a {
+	background-color: #9bd;
+	color: #457;
+	display: inline-block;
+	font-family: verdana;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+.poke-menu-item a:hover {
+	background-color: #8ac;
+}
