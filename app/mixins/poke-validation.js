@@ -82,6 +82,9 @@ export default Mixin.create({
 	},
 
 	validate_required(options, fieldName, fieldValue) {
+		if (_.isNumber(fieldValue)) {
+			fieldValue = fieldValue.toString();
+		}
 		if (_.isEmpty(fieldValue)) {
 			this.addValidationError(fieldName, options.message);
 			return false;
