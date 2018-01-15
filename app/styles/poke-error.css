@@ -1,0 +1,14 @@
+.poke-error {
+	display: inline;
+}
+
+.poke-error-message {
+	font-size: 12px;
+	display: inline;
+	color: #f00;
+}
+
+.poke-error-message::before {
+	content: '* ';
+	display: inline;
+}

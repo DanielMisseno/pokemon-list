@@ -2,16 +2,22 @@
 <div class="poke-edit">
 	<ul class="poke-edit-form">
 		<li>
-			<label class="poke-edit-label" for="poke-name">Nome</label>
-			{{input id="poke-name" value=model.name maxlength="20"}}
+			{{#poke-error errors=errors field="model.name"}}
+				<label class="poke-edit-label" for="poke-name">Nome</label>
+				{{input id="poke-name" value=model.name maxlength="20" focus-out=(action validate "model.name")}}
+			{{/poke-error}}
 		</li>
 		<li>
-			<label class="poke-edit-label" for="poke-height">Altura</label>
-			{{poke-numeric-input id="poke-height" value=model.height maxlength="3" size="3"}}
+			{{#poke-error errors=errors field="model.height"}}
+				<label class="poke-edit-label" for="poke-height">Altura</label>
+				{{poke-numeric-input id="poke-height" value=model.height maxlength="3" size="3" focus-out=(action validate "model.height")}}
+			{{/poke-error}}
 		</li>
 		<li>
-			<label class="poke-edit-label" for="poke-weight">Peso</label>
-			{{poke-numeric-input id="poke-weight" value=model.weight maxlength="3" size="3"}}
+			{{#poke-error errors=errors field="model.weight"}}
+				<label class="poke-edit-label" for="poke-weight">Peso</label>
+				{{poke-numeric-input id="poke-weight" value=model.weight maxlength="3" size="3" focus-out=(action validate "model.weight")}}
+			{{/poke-error}}
 		</li>
 	</ul>
 	{{poke-picture class="poke-edit-picture" src=model.picture}}

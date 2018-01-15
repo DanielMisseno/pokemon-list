@@ -12,6 +12,10 @@ ul li {
 	list-style: none;
 }
 
+input {
+	border: solid 1px #9ad;
+}
+
 .page {
 	border: solid 1px #9ad;
 	box-shadow: 0 0 4px 1px #003;
@@ -42,4 +46,8 @@ ul li {
 .poke-empty-area {
 	position: relative;
 	height: 200px;
+}
+
+.is-invalid input {
+	border-color: #f00;
 }

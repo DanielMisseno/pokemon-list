@@ -2,16 +2,22 @@
 <div class="poke-new">
 	<ul class="poke-new-form">
 		<li>
-			<label class="poke-new-label" for="poke-name">Nome</label>
-			{{input id="poke-name" value=name}}
+			{{#poke-error errors=errors field="name"}}
+				<label class="poke-new-label" for="poke-name">Nome</label>
+				{{input id="poke-name" value=name focus-out=(action validate "name")}}
+			{{/poke-error}}
 		</li>
 		<li>
-			<label class="poke-new-label" for="poke-height">Altura</label>
-			{{input id="poke-height" value=height}}
+			{{#poke-error errors=errors field="height"}}
+				<label class="poke-new-label" for="poke-height">Altura</label>
+				{{poke-numeric-input id="poke-height" value=height maxlength="3" size="3" focus-out=(action validate "height")}}
+			{{/poke-error}}
 		</li>
 		<li>
-			<label class="poke-new-label" for="poke-weight">Peso</label>
-			{{input id="poke-weight" value=weight}}
+			{{#poke-error errors=errors field="weight"}}
+				<label class="poke-new-label" for="poke-weight">Peso</label>
+				{{poke-numeric-input id="poke-weight" value=weight maxlength="3" size="3" focus-out=(action validate "weight")}}
+			{{/poke-error}}
 		</li>
 	</ul>
 	<div class="poke-new-buttons">

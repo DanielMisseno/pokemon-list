@@ -1,7 +1,8 @@
 import Controller from '@ember/controller';
 import { get, set } from '@ember/object';
+import pokeValidation from '../../mixins/poke-validation';
 
-export default Controller.extend({
+export default Controller.extend(pokeValidation, {
 	init() {
 		this._super(...arguments);
 		set(this, 'menuSettings', {
@@ -29,13 +30,30 @@ export default Controller.extend({
 				}
 			}
 		});
+
+		set(this, 'validations', {
+			'model.name': [{
+				type: 'required',
+				message: 'Favor preencher o nome.'
+			}],
+			'model.height': [{
+				type: 'required',
+				message: 'Favor preencher a altura.'
+			}],
+			'model.weight': [{
+				type: 'required',
+				message: 'Favor preencher o peso.'
+			}]
+		});
 	},
 
 	actions: {
 		save(yesNo) {
 			let yes = get(this, 'modal.save.confirmation.buttons.yes.value');
 			if (!yesNo) {
-				set(this, 'showModal', true);
+				this.validate().then((function () {
+					set(this, 'showModal', true);
+				}).bind(this));
 			}
 			else if (yesNo === yes) {
 				let model = get(this, 'model');
